@@ -45,7 +45,7 @@ def create_product(
 
 def read_product(storage: list[Product], product_id: int) -> Product | None:
     product = product_search(storage, product_id)
-    if product is Product:
+    if product is not None:
         return product
 
     print(f"no product with id {product_id}")
